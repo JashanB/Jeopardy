@@ -1,11 +1,14 @@
 import './App.css';
-import { useState } from 'react';
+import { useReducer } from 'react';
 
+function reducer (state, action) {
+
+}
 
 function App() {
-  const [ round, setRound ] = useState(1);
-  const [ money, setMoney ] = useState(0);
-  
+  const [ money, dispatch ] = useReducer(reducer, 0)
+  const [ round, dispatch ] = useReducer(reducer, 1)
+
   return (
     <div className="App">
       
