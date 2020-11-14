@@ -15,6 +15,7 @@ export default function Board(props) {
   //want to useReducer to set value of points based on each round
   //if round === 1, points = 100, === 2, = 200, === 3, = 300
   
+  //board component sets state for round 
 
   return (
     <li className="grid-container">

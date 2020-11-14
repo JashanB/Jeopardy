@@ -1,12 +1,40 @@
-import React, { useEffect } from 'react';
+import React, { useState, useReducer } from 'react';
 import './Question.css'
 
+
+function reducer (state, action) {
+  console.log(action)
+  switch(action.type) {
+    case 'increment':
+      return state + action.amount;
+    default:
+      return state;
+  }
+}
+
 export default function Question(props) {
-  //use effect to set grid size based on # of tiles in row buttons
-  
+  const [ money, dispatch ] = useReducer(reducer, 0);
+  const [input, setInput] = useState('');
+  const pointsWorth = props.pointsWorth;
+
+  //question will have question prompt
+  //input form
+  //submit button
+  //validating screen 
+  //correct or wrong 
+
+  //create function to validate answer - if valid, increase money by points question is worth
+  function validateAnswer (actual, input, points) {
+    if (actual === input) {
+      //change points total state by points
+      dispatch({type: 'increment', amount: points});
+    }
+  }
+  //question component sets state for points total
+
   return (
-    <li className="grid-container">
+    <div className="question-div">
       
-    </li>
+    </div>
   )
 }
