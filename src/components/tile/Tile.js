@@ -1,6 +1,5 @@
 import React, { useReducer, useState } from 'react';
-import './Board.css'
-import Question from '../question';
+import './Tile.css'
 
 function Board(props) {
   const [questionClicked, setQuestionClicked] = useState(false);
