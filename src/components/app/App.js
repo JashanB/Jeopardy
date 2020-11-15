@@ -3,6 +3,7 @@ import React, { useReducer, useState } from 'react';
 import Question from '../question';
 import Board from '../board';
 import reducer from '../reducer';
+import Footer from '../footer';
 
 //create object - 6 categories with 2 questions each 
 const questionBank = [
@@ -44,6 +45,7 @@ function App() {
     <div className="App">
       <Board questionBank={questionBank} currentPoints={currentPoints} round={round} />
       {questionClicked && <Question currentPoints={currentPoints} round={round}/>}
+      <Footer currentPoints={currentPoints}/>
     </div>
   );
 }
