@@ -5,9 +5,13 @@ export default function reducer (state, action) {
   console.log('state', {state})
   switch(action.type) {
     case 'incrementPoints':
-      return state.currentPoints + action.amount;
+      return {
+        currentPoints: state.currentPoints + action.amount
+      };
     case 'incrementRound':
-      return state.round + 1;
+      return {
+        round: state.round + 1
+      };
     default:
       return state;
   }

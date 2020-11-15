@@ -14,8 +14,9 @@ import reducer from '../reducer';
 // }
 
 export default function Question(props) {
-  const [ currentPoints, dispatch ] = useReducer(reducer, props.currentPoints);
+  const [ { currentPoints, round }, dispatch ] = useReducer(reducer, {currentPoints: props.currentPoints, round: props.round});
   const [input, setInput] = useState('');
+  const [questionsRemaining, setQuestionsRemaining] = useState(6);
   // const pointsWorth = props.pointsWorth;
   const pointsWorth = 100;
   //question will have question prompt
@@ -26,6 +27,7 @@ export default function Question(props) {
 
   //create function to validate answer - if valid, increase money by points question is worth
   function validateAnswer (actual, input, pointsFromQuestion) {
+    minusQuestions();
     if (actual === input) {
       //change points total state by points
       dispatch({type: 'incrementPoints', amount: pointsFromQuestion});
@@ -33,10 +35,18 @@ export default function Question(props) {
   }
   //question component sets state for points total
 
+  function minusQuestions (questionCount) {
+    setQuestionsRemaining(state => state-= 1);
+    if (questionsRemaining <= 0) {
+      dispatch({type: 'incrementRound'});
+    }
+  }
+  console.log('curr points ques', currentPoints)
   return (
     <div className="question-div">
       <p>{currentPoints}</p>
-      <button onClick={() => validateAnswer('bob', 'bob', pointsWorth)}></button>
+      <p>{round}</p>
+      <button onClick={() => validateAnswer('bob', 'bob', pointsWorth)}>CLICK ME</button>
     </div>
   )
 }

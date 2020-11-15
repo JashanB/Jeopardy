@@ -1,17 +1,18 @@
 import './App.css';
-import { useReducer } from 'react';
+import React, { useReducer, useState } from 'react';
 import Question from '../question';
+import reducer from '../reducer';
 
-function reducer (state, action) {
-
-}
 //create object - 6 categories with 2 questions each 
 function App() {
-  const currentPoints = 500;
+  // const [ {currentPoints}, setCurrentPoints ] = useState({currentPoints: 100});
+  const [ { currentPoints, round }, dispatch ] = useReducer(reducer, { currentPoints: 0, round: 1 });
+  // const [{round}, dispatch] = useReducer(reducer, {round: 1})
 
+  console.log('curr points initial', currentPoints)
   return (
     <div className="App">
-      <Question currentPoints={currentPoints}/>
+      <Question currentPoints={currentPoints} round={round}/>
     </div>
   );
 }
