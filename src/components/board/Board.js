@@ -5,8 +5,7 @@ import Question from '../question';
 function reducer (state, action) {
 
 }
-
-export default function Board(props) {
+function Board(props) {
   const [questionClicked, setQuestionClicked] = useState(false);
   //make function for if points box clicked, transistions to question (question can be overlayed over board)
 
@@ -14,7 +13,9 @@ export default function Board(props) {
   //all questions will have points = 100 * round 
   return (
     <li className="grid-container">
-      {questionClicked && <Question />}
+      {questionClicked && <Question currentPoints={props.currentPoints} round={props.round}/>}
     </li>
   )
 }
+
+export const Board = React.memo(Board)

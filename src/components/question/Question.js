@@ -2,18 +2,7 @@ import React, { useState, useReducer } from 'react';
 import './Question.css';
 import reducer from '../reducer';
 
-
-// function reducer (state, action) {
-//   console.log(action)
-//   switch(action.type) {
-//     case 'incrementPoints':
-//       return state + action.amount;
-//     default:
-//       return state;
-//   }
-// }
-
-export default function Question(props) {
+function Question(props) {
   const [ { currentPoints, round }, dispatch ] = useReducer(reducer, {currentPoints: props.currentPoints, round: props.round});
   const [input, setInput] = useState('');
   const [questionsRemaining, setQuestionsRemaining] = useState(6);
@@ -53,3 +42,5 @@ export default function Question(props) {
     </div>
   )
 }
+
+export const Question = React.memo(Question)

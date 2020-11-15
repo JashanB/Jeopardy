@@ -42,8 +42,8 @@ function App() {
   console.log('curr points initial', currentPoints)
   return (
     <div className="App">
-      <Board questionBank={questionBank} />
-      <Question currentPoints={currentPoints} round={round} />
+      <Board questionBank={questionBank} currentPoints={currentPoints} round={round} />
+      {/* <Question currentPoints={currentPoints} round={round} /> */}
     </div>
   );
 }
