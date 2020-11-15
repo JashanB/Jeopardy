@@ -1,17 +1,17 @@
 import './App.css';
 import { useReducer } from 'react';
+import Question from '../question';
 
 function reducer (state, action) {
 
 }
 //create object - 6 categories with 2 questions each 
 function App() {
-  const [ money, dispatch ] = useReducer(reducer, 0)
-  const [ round, dispatch ] = useReducer(reducer, 1)
+  const currentPoints = 500;
 
   return (
     <div className="App">
-      
+      <Question currentPoints={currentPoints}/>
     </div>
   );
 }
