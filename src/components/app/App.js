@@ -17,6 +17,10 @@ const questionBank = [
       {
         question: 'life greater than death',
         answer: 'always'
+      },
+      {
+        question: 'long thing',
+        answer: 'yes'
       }
     ]
   },
@@ -30,6 +34,10 @@ const questionBank = [
       {
         question: 'architect of species',
         answer: 'beaver'
+      },
+      {
+        question: 'flying rat',
+        answer: 'pigeon'
       }
     ]
   },
