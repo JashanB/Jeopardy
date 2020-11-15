@@ -43,9 +43,8 @@ export default function Question(props) {
       setQuestionsRemaining(state => state-= 1);
     }
   }
-  console.log('curr points ques', currentPoints)
-  console.log('q remaining', questionsRemaining)
-  console.log('q round', round)
+  //make function to check if round 2 is ending and points = 0 => show game over
+
   return (
     <div className="question-div">
       <p>{currentPoints}</p>

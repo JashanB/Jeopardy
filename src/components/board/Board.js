@@ -17,6 +17,8 @@ export default function Board(props) {
   
   //board component sets state for round 
 
+  //for every object in category, create a column with cateory names as first and clickable points after
+  //all questions will have points = 100 * round 
   return (
     <li className="grid-container">
       
