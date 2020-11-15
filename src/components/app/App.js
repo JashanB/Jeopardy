@@ -7,7 +7,7 @@ import reducer from '../reducer';
 //create object - 6 categories with 2 questions each 
 const questionBank = [
   {
-    categoryName: 'life',
+    category: 'life',
     questions: [
       {
         question: 'hi?',
@@ -20,7 +20,7 @@ const questionBank = [
     ]
   },
   {
-    categoryName: 'animals',
+    category: 'animals',
     questions: [
       {
         question: 'inspires a popular song which asks what this animal sounds like',
