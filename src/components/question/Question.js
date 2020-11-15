@@ -27,7 +27,7 @@ export default function Question(props) {
 
   //create function to validate answer - if valid, increase money by points question is worth
   function validateAnswer (actual, input, pointsFromQuestion) {
-    minusQuestions();
+    minusQuestions(questionsRemaining);
     if (actual === input) {
       //change points total state by points
       dispatch({type: 'incrementPoints', amount: pointsFromQuestion});
@@ -36,12 +36,16 @@ export default function Question(props) {
   //question component sets state for points total
 
   function minusQuestions (questionCount) {
-    setQuestionsRemaining(state => state-= 1);
-    if (questionsRemaining <= 0) {
+    if (questionCount <= 0) {
       dispatch({type: 'incrementRound'});
+      setQuestionsRemaining(state => 6);
+    } else {
+      setQuestionsRemaining(state => state-= 1);
     }
   }
   console.log('curr points ques', currentPoints)
+  console.log('q remaining', questionsRemaining)
+  console.log('q round', round)
   return (
     <div className="question-div">
       <p>{currentPoints}</p>
