@@ -5,7 +5,7 @@ import './Question.css'
 function reducer (state, action) {
   console.log(action)
   switch(action.type) {
-    case 'increment':
+    case 'incrementPoints':
       return state + action.amount;
     default:
       return state;
@@ -27,7 +27,7 @@ export default function Question(props) {
   function validateAnswer (actual, input, points) {
     if (actual === input) {
       //change points total state by points
-      dispatch({type: 'increment', amount: points});
+      dispatch({type: 'incrementPoints', amount: points});
     }
   }
   //question component sets state for points total
