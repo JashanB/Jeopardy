@@ -60,7 +60,7 @@ function App() {
   return (
     <div className="App">
       <Board questionBank={questionBank} currentPoints={currentPoints} round={round} />
-      {questionClicked && <Question currentPoints={currentPoints} round={round}/>}
+      {questionClicked && <Question currentPoints={currentPoints} round={round} question={question} answer={answer}/>}
       <Footer currentPoints={currentPoints}/>
     </div>
   );

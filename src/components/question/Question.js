@@ -3,7 +3,7 @@ import './Question.css';
 import reducer from '../reducer';
 
 function Question(props) {
-  const [ { currentPoints, round }, dispatch ] = useReducer(reducer, {currentPoints: props.currentPoints, round: props.round});
+  // const [ { currentPoints, round }, dispatch ] = useReducer(reducer, {currentPoints: props.currentPoints, round: props.round});
   const [input, setInput] = useState('');
   const [questionsRemaining, setQuestionsRemaining] = useState(6);
   // const pointsWorth = props.pointsWorth;
@@ -36,9 +36,8 @@ function Question(props) {
 
   return (
     <div className="question-div">
-      <p>{currentPoints}</p>
-      <p>{round}</p>
-      <button onClick={() => validateAnswer('bob', 'bob', pointsWorth)}>CLICK ME</button>
+      <p>{props.question}</p>
+      <button onClick={() => validateAnswer('bob', props.answer, pointsWorth)}>CLICK ME</button>
     </div>
   )
 }

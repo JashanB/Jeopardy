@@ -14,14 +14,10 @@ export default function reducer (state, action) {
         ...state,
         round: state.round + 1
       };
-    case 'setQuestion':
+    case 'setQuestionAndAnswer':
         return {
           ...state,
-          question: action.question
-        };
-    case 'setAnswer':
-        return {
-          ...state,
+          question: action.question,
           answer: action.answer
         };
     case 'setQuestionClicked':
