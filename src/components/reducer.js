@@ -24,6 +24,16 @@ export default function reducer (state, action) {
           ...state,
           answer: action.answer
         };
+    case 'setQuestionClicked':
+        return {
+          ...state,
+          questionClicked: true
+        };
+    case 'setQuestionUnclicked':
+        return {
+          ...state,
+          questionClicked: false
+        };
     default:
       return state;
   }
