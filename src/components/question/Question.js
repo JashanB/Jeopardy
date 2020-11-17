@@ -33,10 +33,21 @@ function Question(props) {
     }
   }
   //make function to check if round 2 is ending and points = 0 => show game over
-
+  function handleSubmit (event) {
+    event.preventDefault();
+  };
   return (
     <div className="question-div">
       <p>{props.question}</p>
+      <form className="answer-form" autoComplete="off" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              id="answer-input"
+              placeholder="Type your answer here"
+              onChange={(event) => setInput(event.target.value)}
+              value={input}
+            />
+          </form>
       <button onClick={() => validateAnswer('bob', props.answer, pointsWorth)}>CLICK ME</button>
     </div>
   )
