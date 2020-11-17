@@ -10,7 +10,7 @@ function Board(props) {
     return (
       <TileColumn
         categoryName={category.category}
-        tiles={category.questions}
+        tiles={category.questions[props.round]}
       />
     )
   });
