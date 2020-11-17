@@ -11,6 +11,7 @@ function Board(props) {
       <TileColumn
         categoryName={category.category}
         tiles={category.questions[props.round]}
+        display={props.round}
       />
     )
   });

@@ -11,14 +11,17 @@ const questionBank = [
     category: 'life',
     questions: [
       {
+        key: 'c1q1',
         question: 'hi?',
         answer: 'ho'
       },
       {
+        key: 'c1q2',
         question: 'life greater than death',
         answer: 'always'
       },
       {
+        key: 'c1q3',
         question: 'long thing',
         answer: 'yes'
       }
@@ -28,14 +31,17 @@ const questionBank = [
     category: 'animals',
     questions: [
       {
+        key: 'c2q1',
         question: 'inspires a popular song which asks what this animal sounds like',
         answer: 'fox'
       },
       {
+        key: 'c2q2',
         question: 'architect of species',
         answer: 'beaver'
       },
       {
+        key: 'c2q3',
         question: 'flying rat',
         answer: 'pigeon'
       }
