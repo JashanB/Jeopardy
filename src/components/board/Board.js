@@ -5,15 +5,18 @@ import TileColumn from '../tileColumn';
 function Board(props) {
   //for every object in questionbank, create a column with cateory names as first and clickable points after
   //all questions will have points = 100 * round 
-  const tileList = questionBank.map(function(category) {
+  //make a function to dispatch 
+  const tileColumns = questionBank.map(function(category) {
     return (
-      <TileColumn 
-
+      <TileColumn
+        categoryName={category.category}
+        tiles={category.questions}
       />
     )
   });
   return (
     <li className="grid-container">
+      {tileColumns}
     </li>
   )
 }

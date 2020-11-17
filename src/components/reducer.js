@@ -6,14 +6,24 @@ export default function reducer (state, action) {
   switch(action.type) {
     case 'incrementPoints':
       return {
-        currentPoints: state.currentPoints + action.amount,
-        round: state.round
+        ...state,
+        currentPoints: state.currentPoints + action.amount
       };
     case 'incrementRound':
       return {
-        currentPoints: state.currentPoints,
+        ...state,
         round: state.round + 1
       };
+    case 'setQuestion':
+        return {
+          ...state,
+          question: action.question
+        };
+    case 'setAnswer':
+        return {
+          ...state,
+          answer: action.answer
+        };
     default:
       return state;
   }
