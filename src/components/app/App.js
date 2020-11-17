@@ -51,10 +51,10 @@ const questionBank = [
 
 function App() {
   // const [ {currentPoints}, setCurrentPoints ] = useState({currentPoints: 100});
-  const [{ currentPoints, round, question, answer }, dispatch] = useReducer(reducer, { 
-    currentPoints: 0, round: 1, question: '', answer: '' 
+  const [{ currentPoints, round, question, answer, questionClicked }, dispatch] = useReducer(reducer, { 
+    currentPoints: 0, round: 1, question: '', answer: '', questionClicked: false 
   });
-  const [questionClicked, setQuestionClicked] = useState(false);
+  // const [questionClicked, setQuestionClicked] = useState(false);
   //make function for if points box clicked, transistions to question (question can be overlayed over board)
 
   return (
