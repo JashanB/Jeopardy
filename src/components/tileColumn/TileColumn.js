@@ -11,21 +11,18 @@ function TileColumn(props) {
     display={props.categoryName}
     clickable={false}
   />
-  const tileList = props.tiles.map(function (tile, index) {
-    return (
-      <Tile
-        key={tile.key}
-        question={tile.question}
-        answer={tile.answer}
-        display={props.display}
-        clickable={true}
-      />
-    );
-  })
+  const displayTile = <Tile 
+    key={props.tiles.key}
+    question={props.tiles.question}
+    answer={props.tiles.answer}
+    display={props.tiles.display}
+    clickable={true}
+  />
+
   return (
     <li className="grid-container">
       {categoryTile}
-      {tileList}
+      {displayTile}
     </li>
   )
 }

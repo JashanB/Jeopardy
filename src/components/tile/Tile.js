@@ -13,7 +13,7 @@ function Tile(props) {
   }
   //add function for click off to dispatch set question clicked
   return (
-    <div className="grid-container" onClick={() => handleClick()}>
+    <div className="tile" onClick={() => handleClick()}>
       <p>{props.display}</p>
     </div>
   )
