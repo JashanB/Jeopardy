@@ -14,7 +14,7 @@ export default function useApplicationData() {
     questionClicked: false,
     questionsRemaining: 6
   });
-
+  //question functions
   function validateAnswer (actual, input, pointsFromQuestion, questionsLeft) {
     console.log('you got it!')
     if (questionsLeft <= 0) {
@@ -30,6 +30,14 @@ export default function useApplicationData() {
 
   function minimizeButton () {
     dispatch({type: 'setQuestionUnclicked'})
+  }
+
+  //tile functions
+  function handleTileClick(clickable, tileQuestion, tileAnswer) {
+    if (clickable) {
+      dispatch({type: 'setQuestionClicked'});
+      dispatch({type: 'setQuestionAndAnswer', question: tileQuestion, answer: tileAnswer});
+    }
   }
 
 

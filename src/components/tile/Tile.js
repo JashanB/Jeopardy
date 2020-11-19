@@ -4,16 +4,15 @@ import './Tile.css'
 function Tile(props) {
   //make on click function for the tile thats not the categroy that dispatches the question and answer for it, and sets tile cliced to true
   const clickable = props.clickable;
-  function handleClick() {
-    if (clickable) {
-      dispatch({type: 'setQuestionClicked'});
-      dispatch({type: 'setQuestionAndAnswer', question: props.question, answer: props.answer});
-
-    }
-  }
+  // function handleTileClick(clickable) {
+  //   if (clickable) {
+  //     dispatch({type: 'setQuestionClicked'});
+  //     dispatch({type: 'setQuestionAndAnswer', question: props.question, answer: props.answer});
+  //   }
+  // }
   //add function for click off to dispatch set question clicked
   return (
-    <div className="tile" onClick={() => handleClick()}>
+    <div className="tile" onClick={() => props.handleTileClick(clickable, props.question, props.answer)}>
       <p>{props.display}</p>
     </div>
   )

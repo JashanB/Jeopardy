@@ -5,7 +5,7 @@ import reducer from '../reducer';
 function Question(props) {
   // const [ { currentPoints, round }, dispatch ] = useReducer(reducer, {currentPoints: props.currentPoints, round: props.round});
   const [input, setInput] = useState('');
-  const [questionsRemaining, setQuestionsRemaining] = useState(6);
+  // const [questionsRemaining, setQuestionsRemaining] = useState(6);
   // const pointsWorth = props.pointsWorth;
   const pointsWorth = 100;
   //question will have question prompt
@@ -25,14 +25,14 @@ function Question(props) {
   // }
   //question component sets state for points total
 
-  function minusQuestions (questionCount) {
-    if (questionCount <= 0) {
-      dispatch({type: 'incrementRound'});
-      setQuestionsRemaining(state => 6);
-    } else {
-      setQuestionsRemaining(state => state-= 1);
-    }
-  }
+  // function minusQuestions (questionCount) {
+  //   if (questionCount <= 0) {
+  //     dispatch({type: 'incrementRound'});
+  //     setQuestionsRemaining(state => 6);
+  //   } else {
+  //     setQuestionsRemaining(state => state-= 1);
+  //   }
+  // }
   //make function to check if round 2 is ending and points = 0 => show game over
   function handleSubmit (event) {
     event.preventDefault();
@@ -54,7 +54,7 @@ function Question(props) {
               value={input}
             />
           </form>
-      <button onClick={() => props.validateAnswer(props.question, props.answer, pointsWorth)}>Submit</button>
+      <button onClick={() => props.validateAnswer(props.question, props.answer, pointsWorth, props.questionsRemaining)}>Submit</button>
     </div>
   )
 }
