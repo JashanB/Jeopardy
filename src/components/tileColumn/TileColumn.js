@@ -17,6 +17,7 @@ function TileColumn(props) {
     answer={props.tiles.answer}
     display={props.tiles.display}
     clickable={true}
+    handleTileClick={props.handleTileClick}
   />
 
   return (

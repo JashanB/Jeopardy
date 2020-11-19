@@ -13,6 +13,7 @@ function Board(props) {
         categoryName={block.category}
         tiles={block.questions[props.round]}
         display={displayValue}
+        handleTileClick={props.handleTileClick}
       />
     )
   });

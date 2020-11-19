@@ -66,8 +66,8 @@ function App() {
 
   return (
     <div className="App">
-      <Board questionBank={questionBank} currentPoints={state.currentPoints} round={state.round} />
-      {state.questionClicked && <Question currentPoints={state.currentPoints} round={state.round} question={question} answer={answer}/>}
+      <Board questionBank={questionBank} handleTileClick={handleTileClick} currentPoints={state.currentPoints} round={state.round} />
+      {state.questionClicked && <Question validateAnswer={validateAnswer} minimizeButton={minimizeButton} currentPoints={state.currentPoints} round={state.round} question={question} answer={answer}/>}
       <Footer currentPoints={state.currentPoints}/>
     </div>
   );
