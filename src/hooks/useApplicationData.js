@@ -14,26 +14,19 @@ export default function useApplicationData() {
     questionClicked: false
   });
 
-  function cancelInterview(appointmentId) {
-    return axios.delete(`/api/appointments/${appointmentId}`)
-      .then(() => {
-        //update day spots
-        const daySpots = findDays(state, appointmentId)
-        if (daySpots.spots < 5) {
-          const days = updateDays(state, appointmentId, 1)
-          dispatch({ type: SET_SPOTS, days: days })
-        }
-      })
-      .then(() => {
-        const appointment = state.appointments[appointmentId]
-        appointment.interview = null
-        dispatch({ type: SET_INTERVIEW, interview: { ...state.appointments, [appointmentId]: appointment } })
-      })
+  function validateAnswer (actual, input, pointsFromQuestion) {
+    console.log('you got it!')
+    minusQuestions(questionsRemaining);
+    if (actual === input) {
+      //change points total state by points
+      dispatch({type: 'incrementPoints', amount: pointsFromQuestion});
+    }
   }
 
-  function setDay(day) {
-    dispatch({ type: SET_DAY, day: day })
+  function minimizeButton () {
+    dispatch({type: 'setQuestionUnclicked'})
   }
 
-  return { state, setDay, bookInterview, cancelInterview }
+
+  return { state, validateAnswer, minimizeButton, cancelInterview }
 }

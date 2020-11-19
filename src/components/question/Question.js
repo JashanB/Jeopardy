@@ -15,14 +15,14 @@ function Question(props) {
   //correct or wrong 
 
   //create function to validate answer - if valid, increase money by points question is worth
-  function validateAnswer (actual, input, pointsFromQuestion) {
-    console.log('you got it!')
-    minusQuestions(questionsRemaining);
-    if (actual === input) {
-      //change points total state by points
-      dispatch({type: 'incrementPoints', amount: pointsFromQuestion});
-    }
-  }
+  // function validateAnswer (actual, input, pointsFromQuestion) {
+  //   console.log('you got it!')
+  //   minusQuestions(questionsRemaining);
+  //   if (actual === input) {
+  //     //change points total state by points
+  //     dispatch({type: 'incrementPoints', amount: pointsFromQuestion});
+  //   }
+  // }
   //question component sets state for points total
 
   function minusQuestions (questionCount) {
@@ -38,12 +38,12 @@ function Question(props) {
     event.preventDefault();
   };
 
-  function minimizeButton () {
-    dispatch({type: 'setQuestionUnclicked'})
-  }
+  // function minimizeButton () {
+  //   dispatch({type: 'setQuestionUnclicked'})
+  // }
   return (
     <div className="question-div">
-      <button className="minimize" onClick={() => minimizeButton()}>Minimize</button>
+      <button className="minimize" onClick={() => props.minimizeButton()}>Minimize</button>
       <p>{props.question}</p>
       <form className="answer-form" autoComplete="off" onSubmit={handleSubmit}>
             <input
@@ -54,7 +54,7 @@ function Question(props) {
               value={input}
             />
           </form>
-      <button onClick={() => validateAnswer(props.question, props.answer, pointsWorth)}>Submit</button>
+      <button onClick={() => props.validateAnswer(props.question, props.answer, pointsWorth)}>Submit</button>
     </div>
   )
 }
