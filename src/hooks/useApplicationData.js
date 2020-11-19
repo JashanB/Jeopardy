@@ -11,12 +11,17 @@ export default function useApplicationData() {
     round: 1, 
     question: '', 
     answer: '', 
-    questionClicked: false
+    questionClicked: false,
+    questionsRemaining: 6
   });
 
-  function validateAnswer (actual, input, pointsFromQuestion) {
+  function validateAnswer (actual, input, pointsFromQuestion, questionsLeft) {
     console.log('you got it!')
-    minusQuestions(questionsRemaining);
+    if (questionsLeft <= 0) {
+      dispatch({type: 'incrementRound'});
+    } else {
+      dispatch({type: 'reduceQuestionsRemaining'});
+    }
     if (actual === input) {
       //change points total state by points
       dispatch({type: 'incrementPoints', amount: pointsFromQuestion});
