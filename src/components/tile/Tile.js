@@ -19,4 +19,4 @@ function Tile(props) {
   )
 }
 
-export const Tile = React.memo(Tile)
+export default Tile = React.memo(Tile)

@@ -59,4 +59,4 @@ function Question(props) {
   )
 }
 
-export const Question = React.memo(Question)
+export default Question = React.memo(Question)

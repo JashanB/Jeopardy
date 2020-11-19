@@ -1,5 +1,5 @@
 import React, { useReducer, useState } from 'react';
-import './Tile.css'
+import './TileColumn.css'
 import Tile from '../tile';
 
 
@@ -20,11 +20,11 @@ function TileColumn(props) {
   />
 
   return (
-    <div className="grid-container">
+    <div className="tile-column">
       {categoryTile}
       {displayTile}
     </div>
   )
 }
 
-export const TileColumn = React.memo(TileColumn);
+export default TileColumn = React.memo(TileColumn);
