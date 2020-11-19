@@ -63,11 +63,26 @@ function App() {
   } = useApplicationData();
   // const [questionClicked, setQuestionClicked] = useState(false);
   //make function for if points box clicked, transistions to question (question can be overlayed over board)
-
+  const pointsWorth = state.round * 100;
   return (
     <div className="App">
-      <Board questionBank={questionBank} handleTileClick={handleTileClick} currentPoints={state.currentPoints} round={state.round} />
-      {state.questionClicked && <Question validateAnswer={validateAnswer} minimizeButton={minimizeButton} currentPoints={state.currentPoints} round={state.round} question={question} answer={answer}/>}
+      <Board 
+        displayValue={pointsWorth} 
+        questionBank={questionBank} 
+        handleTileClick={handleTileClick} 
+        currentPoints={state.currentPoints} 
+        round={state.round} 
+      />
+      {state.questionClicked && 
+        <Question 
+          pointsWorth={pointsWorth} 
+          validateAnswer={validateAnswer} 
+          minimizeButton={minimizeButton} 
+          currentPoints={state.currentPoints} 
+          round={state.round} 
+          question={question} 
+          answer={answer}
+        />}
       <Footer currentPoints={state.currentPoints}/>
     </div>
   );
