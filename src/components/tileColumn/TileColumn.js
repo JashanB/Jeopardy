@@ -20,10 +20,10 @@ function TileColumn(props) {
   />
 
   return (
-    <li className="grid-container">
+    <div className="grid-container">
       {categoryTile}
       {displayTile}
-    </li>
+    </div>
   )
 }
 
