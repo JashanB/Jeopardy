@@ -4,6 +4,7 @@ import Question from '../question';
 import Board from '../board';
 import reducer from '../reducer';
 import Footer from '../footer';
+import useApplicationData from "../../hooks/useApplicationData";
 
 //create object - 6 categories with 2 questions each 
 const questionBank = [
@@ -54,14 +55,20 @@ function App() {
   const [{ currentPoints, round, question, answer, questionClicked }, dispatch] = useReducer(reducer, { 
     currentPoints: 0, round: 1, question: '', answer: '', questionClicked: false 
   });
+  const { 
+    state,
+    validateAnswer,
+    minimizeButton,
+    handleTileClick
+  } = useApplicationData();
   // const [questionClicked, setQuestionClicked] = useState(false);
   //make function for if points box clicked, transistions to question (question can be overlayed over board)
 
   return (
     <div className="App">
-      <Board questionBank={questionBank} currentPoints={currentPoints} round={round} />
-      {questionClicked && <Question currentPoints={currentPoints} round={round} question={question} answer={answer}/>}
-      <Footer currentPoints={currentPoints}/>
+      <Board questionBank={questionBank} currentPoints={state.currentPoints} round={state.round} />
+      {state.questionClicked && <Question currentPoints={state.currentPoints} round={state.round} question={question} answer={answer}/>}
+      <Footer currentPoints={state.currentPoints}/>
     </div>
   );
 }

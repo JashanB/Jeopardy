@@ -41,5 +41,5 @@ export default function useApplicationData() {
   }
 
 
-  return { state, validateAnswer, minimizeButton, cancelInterview }
+  return { state, validateAnswer, minimizeButton, handleTileClick }
 }
