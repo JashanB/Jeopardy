@@ -81,8 +81,8 @@ function App() {
           minimizeButton={minimizeButton} 
           currentPoints={state.currentPoints} 
           round={state.round} 
-          question={question} 
-          answer={answer}
+          question={state.question} 
+          answer={state.answer}
           clicker={state.clicker}
           clickerTest={clickerTest}
         />}

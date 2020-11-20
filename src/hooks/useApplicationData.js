@@ -8,7 +8,7 @@ export default function useApplicationData() {
     round: 1, 
     question: '', 
     answer: '', 
-    questionClicked: false,
+    questionClicked: true,
     questionsRemaining: 6,
     clicker: 0
   });

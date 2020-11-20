@@ -39,7 +39,7 @@ export default function reducer (state, action) {
       }
     case 'test':
       return {
-        ...state,
+        ...state, 
         clicker: action.newNum + 1
       }
     default:
