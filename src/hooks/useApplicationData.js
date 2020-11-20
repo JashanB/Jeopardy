@@ -37,6 +37,10 @@ export default function useApplicationData() {
     }
   }
 
+  function clickerTest (count) {
+    dispatch({type: 'test', newNum: count})
+  }
 
-  return { state, validateAnswer, minimizeButton, handleTileClick }
+
+  return { state, validateAnswer, minimizeButton, handleTileClick, clickerTest }
 }
