@@ -9,7 +9,8 @@ export default function useApplicationData() {
     question: '', 
     answer: '', 
     questionClicked: false,
-    questionsRemaining: 6
+    questionsRemaining: 6,
+    clicker: 0
   });
   //question functions
   function validateAnswer (actual, input, pointsFromQuestion, questionsLeft) {

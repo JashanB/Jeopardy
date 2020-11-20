@@ -16,21 +16,21 @@ export default function reducer (state, action) {
         questionsRemaining: 6
       };
     case 'setQuestionAndAnswer':
-        return {
-          ...state,
-          question: action.question,
-          answer: action.answer
-        };
+      return {
+        ...state,
+        question: action.question,
+        answer: action.answer
+      };
     case 'setQuestionClicked':
-        return {
-          ...state,
-          questionClicked: true
-        };
+      return {
+        ...state,
+        questionClicked: true
+      };
     case 'setQuestionUnclicked':
-        return {
-          ...state,
-          questionClicked: false
-        };
+      return {
+        ...state,
+        questionClicked: false
+      };
     case 'reduceQuestionsRemaining':
       return {
         ...state,
@@ -38,10 +38,10 @@ export default function reducer (state, action) {
         questionsRemaining: state.questionsRemaining - 1
       }
     case 'test':
-    return {
-      ...state,
-      clicker: state.clicker + 1
-    }
+      return {
+        ...state,
+        clicker: action.newNum + 1
+      }
     default:
       return state;
   }

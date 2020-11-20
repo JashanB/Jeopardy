@@ -52,14 +52,15 @@ const questionBank = [
 
 function App() {
   // const [ {currentPoints}, setCurrentPoints ] = useState({currentPoints: 100});
-  const [{ currentPoints, round, question, answer, questionClicked }, dispatch] = useReducer(reducer, { 
-    currentPoints: 0, round: 1, question: '', answer: '', questionClicked: false 
-  });
+  // const [{ currentPoints, round, question, answer, questionClicked }, dispatch] = useReducer(reducer, { 
+  //   currentPoints: 0, round: 1, question: '', answer: '', questionClicked: false 
+  // });
   const { 
     state,
     validateAnswer,
     minimizeButton,
-    handleTileClick
+    handleTileClick,
+    clickerTest
   } = useApplicationData();
   // const [questionClicked, setQuestionClicked] = useState(false);
   //make function for if points box clicked, transistions to question (question can be overlayed over board)
@@ -82,6 +83,8 @@ function App() {
           round={state.round} 
           question={question} 
           answer={answer}
+          clicker={state.clicker}
+          clickerTest={clickerTest}
         />}
       <Footer currentPoints={state.currentPoints}/>
     </div>
