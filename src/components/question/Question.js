@@ -3,11 +3,12 @@ import './Question.css';
 import reducer from '../reducer';
 
 function Question(props) {
+  console.log('QUESTION', {props})
   // const [ { currentPoints, round }, dispatch ] = useReducer(reducer, {currentPoints: props.currentPoints, round: props.round});
   const [input, setInput] = useState('');
   // const [questionsRemaining, setQuestionsRemaining] = useState(6);
   // const pointsWorth = props.pointsWorth;
-  const pointsWorth = 100;
+  // const pointsWorth = 100;
   //question will have question prompt
   //input form
   //submit button
@@ -43,7 +44,7 @@ function Question(props) {
   // }
   return (
     <div className="question-div">
-      <button onClick={() => props.clickerTest(props.count)}>Increment Me</button>
+      <button onClick={() => props.clickerTest()}>Increment Me</button>
       <span>{props.clicker}</span>
       {/* <button className="minimize" onClick={() => props.minimizeButton()}>Minimize</button>
       <p>{props.question}</p>
