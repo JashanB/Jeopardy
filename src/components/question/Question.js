@@ -44,9 +44,7 @@ function Question(props) {
   // }
   return (
     <div className="question-div">
-      <button onClick={() => props.clickerTest()}>Increment Me</button>
-      <span>{props.clicker}</span>
-      {/* <button className="minimize" onClick={() => props.minimizeButton()}>Minimize</button>
+      <button className="minimize" onClick={() => props.minimizeButton()}>Minimize</button>
       <p>{props.question}</p>
       <form className="answer-form" autoComplete="off" onSubmit={handleSubmit}>
             <input
@@ -57,7 +55,7 @@ function Question(props) {
               value={input}
             />
           </form>
-      <button onClick={() => props.validateAnswer(props.question, props.answer, pointsWorth, props.questionsRemaining)}>Submit</button> */}
+      <button onClick={() => props.validateAnswer(props.question, props.answer, pointsWorth, props.questionsRemaining)}>Submit</button>
     </div>
   )
 }

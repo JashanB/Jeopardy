@@ -37,11 +37,6 @@ export default function reducer (state, action) {
         // questionsRemaining: state.questionsRemaining -= 1
         questionsRemaining: state.questionsRemaining - 1
       }
-    case 'test':
-      return {
-        ...state, 
-        clicker: state.clicker + 1
-      }
     default:
       return state;
   }

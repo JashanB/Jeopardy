@@ -59,8 +59,7 @@ function App() {
     state,
     validateAnswer,
     minimizeButton,
-    handleTileClick,
-    clickerTest
+    handleTileClick
   } = useApplicationData();
   // const [questionClicked, setQuestionClicked] = useState(false);
   //make function for if points box clicked, transistions to question (question can be overlayed over board)
@@ -83,8 +82,6 @@ function App() {
           round={state.round} 
           question={state.question} 
           answer={state.answer}
-          clicker={state.clicker}
-          clickerTest={clickerTest}
         />}
       <Footer currentPoints={state.currentPoints}/>
     </div>

@@ -9,8 +9,7 @@ export default function useApplicationData() {
     question: '', 
     answer: '', 
     questionClicked: true,
-    questionsRemaining: 6,
-    clicker: 0
+    questionsRemaining: 6
   });
   //question functions
   function validateAnswer (actual, input, pointsFromQuestion, questionsLeft) {
@@ -38,10 +37,5 @@ export default function useApplicationData() {
     }
   }
 
-  function clickerTest (count) {
-    dispatch({type: 'test', newNum: count})
-  }
-
-
-  return { state, validateAnswer, minimizeButton, handleTileClick, clickerTest }
+  return { state, validateAnswer, minimizeButton, handleTileClick }
 }
