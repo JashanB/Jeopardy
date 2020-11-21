@@ -200,23 +200,18 @@ const questionBank = [
 ];
 
 function App() {
-  // const [ {currentPoints}, setCurrentPoints ] = useState({currentPoints: 100});
-  // const [{ currentPoints, round, question, answer, questionClicked }, dispatch] = useReducer(reducer, { 
-  //   currentPoints: 0, round: 1, question: '', answer: '', questionClicked: false 
-  // });
   const { 
     state,
     validateAnswer,
     minimizeButton,
     handleTileClick
   } = useApplicationData();
-  // const [questionClicked, setQuestionClicked] = useState(false);
-  //make function for if points box clicked, transistions to question (question can be overlayed over board)
-  const pointsWorth = state.round * 100;
+
+  // const pointsWorth = state.round * 100;
   return (
     <div className="App">
       <Board 
-        displayValue={pointsWorth} 
+        // displayValue={pointsWorth} 
         questionBank={questionBank} 
         handleTileClick={handleTileClick} 
         currentPoints={state.currentPoints} 
