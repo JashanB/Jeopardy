@@ -51,27 +51,101 @@ const questionBank = [
       {
         key: 'r2c1q4',
         question: 'Jack traded this animal for magic beans.',
-        answer: 'Cow'
+        answer: 'cow'
       }
     ]
   },
   {
-    category: 'animals',
-    questions: [
+    category: 'VEGETABLES',
+    round1: [
       {
-        key: 'c2q1',
-        question: 'inspires a popular song which asks what this animal sounds like',
-        answer: 'fox'
+        key: 'r1c2q1',
+        question: 'This green vegetable is used to make pickles.',
+        answer: 'cucumber'
       },
       {
-        key: 'c2q2',
-        question: 'architect of species',
-        answer: 'beaver'
+        key: 'r1c2q2',
+        question: 'This vegetable grows on vines and its name is often used to describe something you might do to a bug',
+        answer: 'squash'
       },
       {
-        key: 'c2q3',
-        question: 'flying rat',
-        answer: 'pigeon'
+        key: 'r1c2q3',
+        question: 'This vegetable is also a letter of the alphabet.',
+        answer: 'pea'
+      },
+      {
+        key: 'r1c2q4',
+        question: 'Popeye gets his strength from this vegetable.',
+        answer: 'spinach'
+      }
+    ],
+    round2: [
+      {
+        key: 'r2c2q1',
+        question: 'Bugs Bunny\'s favourite food.',
+        answer: 'carrot'
+      },
+      {
+        key: 'r2c2q2',
+        question: 'This vegetable grows on vines and its name is often used to describe something you might do to a bug.',
+        answer: 'squash'
+      },
+      {
+        key: 'r2c2q3',
+        question: 'Maize is another name for this vegetable.',
+        answer: 'corn'
+      },
+      {
+        key: 'r2c2q4',
+        question: 'When you eat this green vegetable, you\'re actually eating the flower.',
+        answer: 'broccoli'
+      }
+    ]
+  },
+  {
+    category: 'MUSICAL INSTRUMENTS',
+    round1: [
+      {
+        key: 'r1c3q1',
+        question: 'This string instrument is used as a fiddle in country or bluegrass music.',
+        answer: 'violin'
+      },
+      {
+        key: 'r1c3q2',
+        question: 'This woodwind instrument is nearly 8 feet long and has the lowest voice.',
+        answer: 'bassoon'
+      },
+      {
+        key: 'r1c3q3',
+        question: 'This brass instrument is the only one to use a slide to change pitches.',
+        answer: 'trombone'
+      },
+      {
+        key: 'r1c3q4',
+        question: 'This percussion instrument makes sound when hammers hit strings inside of it.',
+        answer: 'piano'
+      }
+    ],
+    round2: [
+      {
+        key: 'r2c3q1',
+        question: 'When two people are singing it is called this.',
+        answer: 'duet'
+      },
+      {
+        key: 'r2c3q2',
+        question: 'The highest man\'s voice is called this.',
+        answer: 'tenor'
+      },
+      {
+        key: 'r2c3q3',
+        question: 'The orchestra tunes to this instrument.',
+        answer: 'oboe'
+      },
+      {
+        key: 'r2c3q4',
+        question: 'This instrument is played by blowing across the mouthpiece.',
+        answer: 'flute'
       }
     ]
   },
