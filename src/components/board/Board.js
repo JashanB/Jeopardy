@@ -7,7 +7,6 @@ function Board(props) {
   //all questions will have points = 100 * round 
   //make a function to dispatch 
   const tileColumns = props.questionBank.map(function(block, index) {
-    const displayValue = 100 * props.round * (index + 1);
     if (props.round === 1) {
       const tiles = block.round1;
     } else if (props.round === 2) {
@@ -17,7 +16,7 @@ function Board(props) {
       <TileColumn
         categoryName={block.category}
         tiles={tiles}
-        display={displayValue}
+        round={props.round}
         handleTileClick={props.handleTileClick}
       />
     )
