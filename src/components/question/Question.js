@@ -1,6 +1,5 @@
-import React, { useState, useReducer } from 'react';
+import React, { useState } from 'react';
 import './Question.css';
-import reducer from '../reducer';
 
 function Question(props) {
   console.log('QUESTION', {props})
@@ -55,7 +54,7 @@ function Question(props) {
               value={input}
             />
           </form>
-      <button onClick={() => props.validateAnswer(props.question, props.answer, props.pointsForQuestion, props.questionsRemaining)}>Submit</button>
+      <button onClick={() => props.validateAnswer(props.answer, input, props.pointsForQuestion, props.questionsRemaining)}>Submit</button>
     </div>
   )
 }

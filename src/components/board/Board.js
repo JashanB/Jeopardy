@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react';
+import React from 'react';
 import './Board.css'
 import TileColumn from '../tileColumn';
 
@@ -6,7 +6,7 @@ function Board(props) {
   //for every object in questionbank, create a column with cateory names as first and cdivckable points after
   //all questions will have points = 100 * round 
   //make a function to dispatch 
-  const tileColumns = props.questionBank.map(function(block, index) {
+  const tileColumns = props.questionBank.map(function(block) {
     let tiles;
     if (props.round === 1) {
       tiles = block.round1;
@@ -15,6 +15,7 @@ function Board(props) {
     }
     return (
       <TileColumn
+        key={block.key}
         categoryName={block.category}
         tiles={tiles}
         round={props.round}

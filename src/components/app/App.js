@@ -1,8 +1,6 @@
 import './App.css';
-import React, { useReducer, useState } from 'react';
 import Question from '../question';
 import Board from '../board';
-import reducer from '../reducer';
 import Footer from '../footer';
 import useApplicationData from "../../hooks/useApplicationData";
 
@@ -10,6 +8,7 @@ import useApplicationData from "../../hooks/useApplicationData";
 const questionBank = [
   {
     category: 'FAIRY TALES',
+    key: 'cat1',
     round1: [
       {
         key: 'r1c1q1',
@@ -57,6 +56,7 @@ const questionBank = [
   },
   {
     category: 'VEGETABLES',
+    key: 'cat2',
     round1: [
       {
         key: 'r1c2q1',
@@ -104,6 +104,7 @@ const questionBank = [
   },
   {
     category: 'MUSICAL INSTRUMENTS',
+    key: 'cat3',
     round1: [
       {
         key: 'r1c3q1',
@@ -149,9 +150,9 @@ const questionBank = [
       }
     ]
   },
-  ,
   {
     category: 'SWEETS',
+    key: 'cat4',
     round1: [
       {
         key: 'r1c4q1',
@@ -196,7 +197,7 @@ const questionBank = [
         answer: 'Jolly Ranchers'
       }
     ]
-  },
+  }
 ];
 
 function App() {

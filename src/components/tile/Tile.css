@@ -1,5 +1,12 @@
 .tile {
-  height: 10%;
-  width: 10%;
+  height: 100%;
+  width: 100%;
   background-color: blue;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.tile p {
+  margin-top: auto;
+  margin-bottom: auto;
 }
