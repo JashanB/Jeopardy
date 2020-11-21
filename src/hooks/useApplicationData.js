@@ -9,7 +9,8 @@ export default function useApplicationData() {
     question: '', 
     answer: '', 
     questionClicked: true,
-    questionsRemaining: 6
+    questionsRemaining: 6,
+    pointsForQuestion: 0
   });
   //question functions
   function validateAnswer (actual, input, pointsFromQuestion, questionsLeft) {
@@ -30,10 +31,10 @@ export default function useApplicationData() {
   }
 
   //tile functions
-  function handleTileClick(clickable, tileQuestion, tileAnswer) {
+  function handleTileClick(clickable, tileQuestion, tileAnswer, pointsWorth) {
     if (clickable) {
       dispatch({type: 'setQuestionClicked'});
-      dispatch({type: 'setQuestionAndAnswer', question: tileQuestion, answer: tileAnswer});
+      dispatch({type: 'setQuestionAndAnswerAndPoints', question: tileQuestion, answer: tileAnswer, pointsWorth: pointsWorth});
     }
   }
 

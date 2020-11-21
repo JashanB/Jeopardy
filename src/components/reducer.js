@@ -15,11 +15,12 @@ export default function reducer (state, action) {
         round: state.round + 1,
         questionsRemaining: 6
       };
-    case 'setQuestionAndAnswer':
+    case 'setQuestionAndAnswerAndPoints':
       return {
         ...state,
         question: action.question,
-        answer: action.answer
+        answer: action.answer,
+        pointsForQuestion: action.pointsWorth
       };
     case 'setQuestionClicked':
       return {

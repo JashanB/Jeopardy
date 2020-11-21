@@ -55,7 +55,7 @@ function Question(props) {
               value={input}
             />
           </form>
-      <button onClick={() => props.validateAnswer(props.question, props.answer, pointsWorth, props.questionsRemaining)}>Submit</button>
+      <button onClick={() => props.validateAnswer(props.question, props.answer, props.pointsForQuestion, props.questionsRemaining)}>Submit</button>
     </div>
   )
 }

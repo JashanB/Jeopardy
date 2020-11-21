@@ -207,11 +207,9 @@ function App() {
     handleTileClick
   } = useApplicationData();
 
-  // const pointsWorth = state.round * 100;
   return (
     <div className="App">
       <Board 
-        // displayValue={pointsWorth} 
         questionBank={questionBank} 
         handleTileClick={handleTileClick} 
         currentPoints={state.currentPoints} 
@@ -219,13 +217,13 @@ function App() {
       />
       {state.questionClicked && 
         <Question 
-          pointsWorth={pointsWorth} 
           validateAnswer={validateAnswer} 
           minimizeButton={minimizeButton} 
           currentPoints={state.currentPoints} 
           round={state.round} 
           question={state.question} 
           answer={state.answer}
+          pointsForQuestion={state.pointsForQuestion}
         />}
       <Footer currentPoints={state.currentPoints}/>
     </div>

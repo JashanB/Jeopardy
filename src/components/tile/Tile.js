@@ -12,7 +12,7 @@ function Tile(props) {
   // }
   //add function for click off to dispatch set question clicked
   return (
-    <div className="tile" onClick={() => props.handleTileClick(clickable, props.question, props.answer)}>
+    <div className="tile" onClick={() => props.handleTileClick(clickable, props.question, props.answer, props.display)}>
       <p>{props.display}</p>
     </div>
   )
