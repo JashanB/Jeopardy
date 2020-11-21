@@ -5,42 +5,13 @@ function Question(props) {
   console.log('QUESTION', {props})
   // const [ { currentPoints, round }, dispatch ] = useReducer(reducer, {currentPoints: props.currentPoints, round: props.round});
   const [input, setInput] = useState('');
-  // const [questionsRemaining, setQuestionsRemaining] = useState(6);
-  // const pointsWorth = props.pointsWorth;
-  // const pointsWorth = 100;
-  //question will have question prompt
-  //input form
-  //submit button
-  //validating screen 
-  //correct or wrong 
 
-  //create function to validate answer - if valid, increase money by points question is worth
-  // function validateAnswer (actual, input, pointsFromQuestion) {
-  //   console.log('you got it!')
-  //   minusQuestions(questionsRemaining);
-  //   if (actual === input) {
-  //     //change points total state by points
-  //     dispatch({type: 'incrementPoints', amount: pointsFromQuestion});
-  //   }
-  // }
-  //question component sets state for points total
-
-  // function minusQuestions (questionCount) {
-  //   if (questionCount <= 0) {
-  //     dispatch({type: 'incrementRound'});
-  //     setQuestionsRemaining(state => 6);
-  //   } else {
-  //     setQuestionsRemaining(state => state-= 1);
-  //   }
-  // }
   //make function to check if round 2 is ending and points = 0 => show game over
+
   function handleSubmit (event) {
     event.preventDefault();
   };
 
-  // function minimizeButton () {
-  //   dispatch({type: 'setQuestionUnclicked'})
-  // }
   return (
     <div className="question-div">
       <button className="minimize" onClick={() => props.minimizeButton()}>Minimize</button>

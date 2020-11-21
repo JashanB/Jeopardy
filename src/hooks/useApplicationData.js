@@ -8,8 +8,8 @@ export default function useApplicationData() {
     round: 1, 
     question: '', 
     answer: '', 
-    questionClicked: true,
-    questionsRemaining: 6,
+    questionClicked: false,
+    questionsRemaining: 16,
     pointsForQuestion: 0
   });
   //question functions
