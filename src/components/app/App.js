@@ -9,22 +9,49 @@ import useApplicationData from "../../hooks/useApplicationData";
 //create object - 6 categories with 2 questions each 
 const questionBank = [
   {
-    category: 'life',
-    questions: [
+    category: 'FAIRY TALES',
+    round1: [
       {
-        key: 'c1q1',
-        question: 'hi?',
-        answer: 'ho'
+        key: 'r1c1q1',
+        question: 'She couldn\'t bear certain bowls, beads, and chairs.',
+        answer: 'Goldilocks'
       },
       {
-        key: 'c1q2',
-        question: 'life greater than death',
-        answer: 'always'
+        key: 'r1c1q2',
+        question: 'A little girl outsmarts a wolf.',
+        answer: 'Little Red Riding Hood'
       },
       {
-        key: 'c1q3',
-        question: 'long thing',
-        answer: 'yes'
+        key: 'r1c1q3',
+        question: 'Big things can come from small magical things.',
+        answer: 'Jack and the Beanstalk'
+      },
+      {
+        key: 'r1c1q4',
+        question: 'Two kids get lost in the woods and encounter danger in a sweet place.',
+        answer: 'Hansel and Gretel'
+      }
+    ],
+    round2: [
+      {
+        key: 'r2c1q1',
+        question: 'Ate a poisoned apple.',
+        answer: 'Snow White'
+      },
+      {
+        key: 'r2c1q2',
+        question: 'She went from rags to ritches.',
+        answer: 'Cinderella'
+      },
+      {
+        key: 'r2c1q3',
+        question: 'She was taken hostage and held in a tower.',
+        answer: 'Rapunzel'
+      },
+      {
+        key: 'r2c1q4',
+        question: 'Jack traded this animal for magic beans.',
+        answer: 'Cow'
       }
     ]
   },
