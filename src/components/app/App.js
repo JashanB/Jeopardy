@@ -225,6 +225,7 @@ function App() {
           question={state.question} 
           answer={state.answer}
           pointsForQuestion={state.pointsForQuestion}
+          questionsRemaining={state.questionsRemaining}
         />}
       <Footer currentPoints={state.currentPoints}/>
     </div>

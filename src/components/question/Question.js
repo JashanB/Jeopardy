@@ -3,7 +3,6 @@ import './Question.css';
 
 function Question(props) {
   console.log('QUESTION', {props})
-  // const [ { currentPoints, round }, dispatch ] = useReducer(reducer, {currentPoints: props.currentPoints, round: props.round});
   const [input, setInput] = useState('');
 
   //make function to check if round 2 is ending and points = 0 => show game over
