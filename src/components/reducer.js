@@ -7,7 +7,8 @@ export default function reducer (state, action) {
     case 'incrementPoints':
       return {
         ...state,
-        currentPoints: state.currentPoints + action.amount
+        currentPoints: state.currentPoints + action.amount,
+        questionClicked: false
       };
     case 'incrementRound':
       return {
@@ -35,7 +36,6 @@ export default function reducer (state, action) {
     case 'reduceQuestionsRemaining':
       return {
         ...state,
-        // questionsRemaining: state.questionsRemaining -= 1
         questionsRemaining: state.questionsRemaining - 1
       }
     default:
